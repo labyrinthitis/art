@@ -1,0 +1,182 @@
+/* reset */
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  background-color: #f6f6ef;
+  scrollbar-color: #555 #222;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: #f9f9f9;
+}
+
+h1 {
+  font: bold 2.6rem "Trebuchet MS", sans-serif;
+  text-shadow: #222 0.18rem 0.18rem;
+  letter-spacing: 0.17rem;
+}
+
+h1:hover {
+  text-transform: uppercase;
+}
+
+.nav {
+  background-color: #f88b42;
+  border-bottom: 0.25rem solid #222;
+}
+
+/* search bar */
+.search {
+  width: 100%;
+  background-color: #0499cf;
+  font: 1.6rem "Courier", monospace;
+  padding: 1rem 0.75rem;
+  letter-spacing: 0.063rem;
+  margin: 1.5rem 0rem;
+  border-radius: 0.313rem;
+  border: 0.25rem solid #222;
+  color: #f1f1f1;
+  outline: none;
+  caret-color: #f6f6ef;
+}
+
+.search:focus {
+  background-color: #1da3d3;
+}
+
+::placeholder {
+  color: #e0e0e0;
+  font-size: 1.6rem;
+  letter-spacing: 0.085rem;
+}
+
+/* api data output */
+.card {
+  background-color: #03a042;
+  border-radius: 0.313rem;
+  border: 0.25rem solid #222;
+  margin-bottom: 2.6rem;
+}
+
+.artwork {
+  width: 100%;
+  border-bottom: 0.25rem solid #222;
+}
+
+.description {
+  font: 1.8rem "Times New Roman", serif;
+  color: #f9f9f9;
+  padding: 0rem 1rem;
+}
+
+.artist {
+  font-weight: bold;
+}
+
+.culture::before {
+  content: " (";
+}
+
+.culture::after {
+  content: "), ";
+}
+
+.title {
+  font-style: italic;
+}
+
+.date::before {
+  content: ", ";
+}
+
+.date::after {
+  content: ".";
+}
+
+/* no data output */
+.not-found {
+  font-family: "Times New Roman", serif;
+  color: #999;
+}
+
+.not-found-h1 {
+  font-size: 3.8rem;
+  margin-top: 1rem;
+}
+
+.not-found-p {
+  font-size: 1.8rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* buttons */
+.scroll {
+  background-color: #0499cf;
+  color: #f6f6ef;
+  border: 0.25rem solid #222;
+  border-radius: 0.313rem;
+  cursor: pointer;
+  padding: 1rem 0.75rem;
+  width: 4.688rem;
+  margin-bottom: 2rem;
+}
+
+.scroll:hover {
+  background-color: #f88b42;
+  color: #f6f6ef;
+}
+
+/* icons */
+.top {
+  width: 1rem;
+  height: 0.875rem;
+}
+
+/* layout */
+.container {
+  margin: 0 auto;
+  max-width: 50rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column-full {
+  width: 100%;
+}
+
+/* utility */
+.hidden {
+  display: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* mobile */
+@media only screen and (max-width: 1200px) {
+  .container {
+    max-width: 34rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    max-width: 24rem;
+  }
+}

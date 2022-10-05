@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>art-query</title>
+  <link rel="stylesheet" href="assets/main.css">
+</head>
+<body>
+  <div class="nav">
+    <div class="container">
+      <div class="row">
+        <div class="column-full">
+          <h1 class="text-center"><a href="https://github.com/apophatic/art-query/">art-query</a></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="column-full">
+        <form>
+          <input
+            type="search"
+            class="search"
+            pattern="[A-Za-z\sÁ-Źá-ź]+"
+            placeholder="Search by keyword, title, or artist..."
+          >
+        </form>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="column-full">
+        <div class="view deck">
+        </div>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="column-full">
+        <div class="view hidden">
+        </div>
+      </div>
+    </div>
+    <div class="footer hidden">
+      <button class="scroll">
+        <svg
+          class="top"
+          viewbox="0 0 448 512">
+          <path
+            fill="currentColor"
+            d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z">
+          </path>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
