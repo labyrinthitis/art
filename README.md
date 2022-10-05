@@ -1,9 +1,5 @@
 # [art-query](https://apophatic.github.io/art-query/)
 
-Query the artwork within the [harvard arts museums](https://harvardartmuseums.org/) credit to the [harvard arts museums api](https://github.com/harvardartmuseums/api-docs/).
-
-An incredibily simple [AJAX](https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX) app making use of the [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) object with some minor [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document) manipulation.
-
-[W3C](https://validator.w3.org/) HTML & CSS validated.
+An incredibly simple application to query the artwork within the [Harvard Arts Museums](https://harvardartmuseums.org/), credit to the [Harvard Arts Museums API](https://github.com/harvardartmuseums/api-docs/). Built with [AJAX](https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX), specifically the [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) object, and with minor [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document) manipulations. [W3C HTML and CSS validated](https://validator.w3.org/).
 
 ![desktop screenshot](1.png "desktop screenshot")
