@@ -1,4 +1,27 @@
-/* reset */
+@font-face {
+  font-family: OpenDyslexic;
+  src: url(OpenDyslexic-Regular.otf);
+}
+
+@font-face {
+  font-family: OpenDyslexic;
+  src: url(OpenDyslexic-Italic.otf);
+  font-style: italic;
+}
+
+@font-face {
+  font-family: OpenDyslexic;
+  src: url(OpenDyslexic-Bold.otf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: OpenDyslexic;
+  src: url(OpenDyslexic-Bold-Italic.otf);
+  font-weight: bold;
+  font-style: italic;
+}
+
 * {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -19,33 +42,33 @@ a {
 }
 
 h1 {
-  font: bold 2.6rem "Trebuchet MS", sans-serif;
+  font: bold 2.6rem OpenDyslexic;
   text-shadow: #222 0.18rem 0.18rem;
   letter-spacing: 0.17rem;
+  text-transform: uppercase;
 }
 
 h1:hover {
-  text-transform: uppercase;
+  text-transform: lowercase;
 }
 
 .nav {
   background-color: #f88b42;
-  border-bottom: 0.25rem solid #222;
+  border-bottom: 0.15rem solid #222;
 }
 
-/* search bar */
 .search {
   width: 100%;
   background-color: #0499cf;
-  font: 1.6rem "Courier", monospace;
+  font: 1.6rem OpenDyslexic;
   padding: 1rem 0.75rem;
   letter-spacing: 0.063rem;
   margin: 1.5rem 0rem;
   border-radius: 0.313rem;
-  border: 0.25rem solid #222;
-  color: #f1f1f1;
+  border: 0.15rem solid #222;
+  color: #f9f9f9;
   outline: none;
-  caret-color: #f6f6ef;
+  caret-color: #f9f9f9;
 }
 
 .search:focus {
@@ -58,11 +81,10 @@ h1:hover {
   letter-spacing: 0.085rem;
 }
 
-/* api data output */
 .card {
   background-color: #03a042;
   border-radius: 0.313rem;
-  border: 0.25rem solid #222;
+  border: 0.15rem solid #222;
   margin-bottom: 2.6rem;
 }
 
@@ -72,7 +94,7 @@ h1:hover {
 }
 
 .description {
-  font: 1.8rem "Times New Roman", serif;
+  font: 1.8rem OpenDyslexic;
   color: #f9f9f9;
   padding: 0rem 1rem;
 }
@@ -101,9 +123,8 @@ h1:hover {
   content: ".";
 }
 
-/* no data output */
 .not-found {
-  font-family: "Times New Roman", serif;
+  font-family: OpenDyslexic;
   color: #999;
 }
 
@@ -121,30 +142,23 @@ h1:hover {
   justify-content: flex-end;
 }
 
-/* buttons */
 .scroll {
-  background-color: #0499cf;
-  color: #f6f6ef;
-  border: 0.25rem solid #222;
-  border-radius: 0.313rem;
+  font-family: OpenDyslexic;
+  font-size: 1.2rem;
+  background-color: #676464;
+  color: #f9f9f9;
+  border: 0.15rem solid #222;
   cursor: pointer;
-  padding: 1rem 0.75rem;
-  width: 4.688rem;
+  padding: 0.6rem 0.35rem;
+  width: 16rem;
   margin-bottom: 2rem;
 }
 
 .scroll:hover {
-  background-color: #f88b42;
-  color: #f6f6ef;
+  background-color: #757575;
+  color: #f9f9f9;
 }
 
-/* icons */
-.top {
-  width: 1rem;
-  height: 0.875rem;
-}
-
-/* layout */
 .container {
   margin: 0 auto;
   max-width: 50rem;
@@ -159,7 +173,6 @@ h1:hover {
   width: 100%;
 }
 
-/* utility */
 .hidden {
   display: none;
 }

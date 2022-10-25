@@ -18,7 +18,7 @@ $input.addEventListener('input', function () {
 
 $input.addEventListener('invalid', function () {
   if ($input.value === '') {
-    $input.setCustomValidity('Search by keyword, title, or artist...');
+    $input.setCustomValidity('Search by keyword...');
   } else {
     $input.setCustomValidity('Use only alphabetic letters...');
   }
@@ -50,7 +50,7 @@ function request(keyword) {
     }
 
     if (xhr.response.records.length === 0) {
-      const $notfoundheader = document.createElement('h1');
+      const $notfoundheader = document.createElement('h2');
       const $notfoundtext = document.createElement('p');
 
       $notfoundheader.className = 'not-found not-found-h1';
@@ -101,6 +101,11 @@ function request(keyword) {
       $date.textContent = xhr.response.records[i].dated;
       $artist.textContent = xhr.response.records[i].people[0].displayname;
       $culture.textContent = xhr.response.records[i].culture;
+
+      $image.alt = $title.textContent;
+      $image.title = $title.textContent;
+      $description.alt = $artist.textContent;
+      $description.title = $artist.textContent;
 
       document.querySelector('.footer').className = 'footer view';
     }
