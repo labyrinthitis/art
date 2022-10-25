@@ -39,6 +39,7 @@ body {
 
 a {
   color: #f9f9f9;
+  text-decoration: none;
 }
 
 h1 {
@@ -52,6 +53,10 @@ h1:hover {
   text-transform: lowercase;
 }
 
+img {
+  font-family: OpenDyslexic;
+}
+
 .nav {
   background-color: #f88b42;
   border-bottom: 0.15rem solid #222;
@@ -62,7 +67,6 @@ h1:hover {
   background-color: #0499cf;
   font: 1.6rem OpenDyslexic;
   padding: 1rem 0.75rem;
-  letter-spacing: 0.063rem;
   margin: 1.5rem 0rem;
   border-radius: 0.313rem;
   border: 0.15rem solid #222;
@@ -76,9 +80,8 @@ h1:hover {
 }
 
 ::placeholder {
-  color: #e0e0e0;
+  color: #d6d5d5;
   font-size: 1.6rem;
-  letter-spacing: 0.085rem;
 }
 
 .card {
@@ -181,7 +184,6 @@ h1:hover {
   text-align: center;
 }
 
-/* mobile */
 @media only screen and (max-width: 1200px) {
   .container {
     max-width: 34rem;
@@ -193,3 +195,12 @@ h1:hover {
     max-width: 24rem;
   }
 }
+
+/* clears the ‘X’ from Internet Explorer */
+input[type=search]::-ms-clear { display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal { display: none; width : 0; height: 0; }
+/* clears the ‘X’ from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { -webkit-appearance:none; }
