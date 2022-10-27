@@ -49,17 +49,19 @@ function request(keyword) {
       $deck.innerHTML = '';
     }
 
+    document.querySelector('.quote').className = 'quote hidden';
+
     if (xhr.response.records.length === 0) {
       const $notfoundheader = document.createElement('h2');
-      const $notfoundtext = document.createElement('p');
+      const $notfoundparagraph = document.createElement('p');
 
-      $notfoundheader.className = 'not-found not-found-h1';
-      $notfoundtext.className = 'not-found not-found-p';
+      $notfoundheader.className = 'txt-header';
+      $notfoundparagraph.className = 'txt-paragraph';
       $notfoundheader.textContent = '404 :/';
-      $notfoundtext.textContent = 'There are no results for that criteria within the directory of the Harvard Art Mueseums.';
+      $notfoundparagraph.textContent = "There are no results for that criteria within the directory of the Harvard Art Mueseums. Try 'william blake', or 'my lady greensleeves'.";
 
       document.querySelector('.deck').append($notfoundheader);
-      document.querySelector('.deck').append($notfoundtext);
+      document.querySelector('.deck').append($notfoundparagraph);
 
       document.querySelector('.footer').className = 'footer hidden';
     }
