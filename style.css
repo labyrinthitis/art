@@ -1,82 +1,81 @@
 @font-face {
   font-family: OpenDyslexic;
-  src: url(OpenDyslexic-Regular.otf);
+  src: url(fonts/OpenDyslexic-Regular.otf);
 }
 
 @font-face {
   font-family: OpenDyslexic;
-  src: url(OpenDyslexic-Italic.otf);
+  src: url(fonts/OpenDyslexic-Italic.otf);
   font-style: italic;
 }
 
 @font-face {
   font-family: OpenDyslexic;
-  src: url(OpenDyslexic-Bold.otf);
+  src: url(fonts/OpenDyslexic-Bold.otf);
   font-weight: bold;
 }
 
 @font-face {
   font-family: OpenDyslexic;
-  src: url(OpenDyslexic-Bold-Italic.otf);
+  src: url(fonts/OpenDyslexic-Bold-Italic.otf);
   font-weight: bold;
   font-style: italic;
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-html {
-  background-color: #f6f6ef;
-  scrollbar-color: #555 #222;
+  --text-light: #f9f9f9;
+  --text-dark: #999;
+  --bg: #f6f6ef;
+  --header-bg: #f88b42;
+  --card-bg: #03a042;
+  --butt-bg: #0499cf;
+  --butt-bg-hover: #1da3d3;
+  --search-bg: #676464;
+  --search-bg-focus: #757575;
+  --border: #222;
 }
 
 body {
-  margin: 0;
-}
-
-a {
-  color: #f9f9f9;
-  text-decoration: none;
+  background: var(--bg);
+  margin: 0 auto;
 }
 
 h1 {
-  font: bold 2.4rem OpenDyslexic;
-  text-shadow: #222 0.18rem 0.18rem;
-  letter-spacing: 0.17rem;
-  margin: 2rem 0rem;
-}
-
-h1:hover {
-  text-transform: uppercase;
+  font: bold 2.6rem OpenDyslexic;
+  color: var(--text-light);
+  text-shadow: #222 0.15rem 0.15rem;
 }
 
 img {
   font-family: OpenDyslexic;
+  width: 100%;
+  border-bottom: 0.1rem solid var(--border);
 }
 
-.nav {
-  background-color: #f88b42;
-  border-bottom: 0.15rem solid #222;
+header {
+  background: var(--header-bg);
+  border-bottom: 0.1rem solid var(--border);
+  padding: 2.6rem 0rem;
 }
 
 .search {
   width: 100%;
-  background-color: #676464;
+  background: var(--search-bg);
   font: 1.6rem OpenDyslexic;
   padding: 0.68rem 0.68rem;
-  margin: 2rem 0rem;
-  border: 0.15rem solid #222;
-  border-radius: 1rem;
-  color: #f9f9f9;
+  border: 0.1rem solid var(--border);
+  border-radius: 1.4rem;
+  color: var(--text-light);
   outline: none;
   caret-color: #f9f9f9;
 }
 
 .search:focus {
-  background-color: #757575;
+  background: var(--search-bg-focus);
 }
 
 ::placeholder {
@@ -85,21 +84,15 @@ img {
 }
 
 .card {
-  background-color: #03a042;
-  border: 0.15rem solid #222;
-  margin-top: 2.6rem;
-  margin-bottom: 2.6rem;
-}
-
-.artwork {
-  width: 100%;
-  border-bottom: 0.15rem solid #222;
+  background: var(--card-bg);
+  margin: 3.4rem 0rem;
+  border: 0.1rem solid var(--border);
 }
 
 .description {
   font: 1.8rem OpenDyslexic;
-  color: #f9f9f9;
-  padding: 0rem 1rem;
+  color: var(--text-light);
+  padding: 1rem 1rem;
 }
 
 .artist {
@@ -128,15 +121,22 @@ img {
 
 .txt-header {
   font: 3.2rem OpenDyslexic;
-  color: #999;
-  margin-top: 6rem;
+  color: var(--text-dark);
+  margin-top: 4rem;
 }
 
 .txt-paragraph {
   font: 1.8rem OpenDyslexic;
-  color: #999;
-  margin-top: 0;
+  color: var(--text-dark);
   margin-bottom: 4rem;
+}
+
+.quote {
+  margin-top: 5rem;
+}
+
+footer {
+  margin-bottom: 3rem;
 }
 
 .footer {
@@ -144,20 +144,19 @@ img {
   justify-content: flex-end;
 }
 
-.scroll {
+button {
   font: 1.2rem OpenDyslexic;
-  background-color: #0499cf;
-  color: #f9f9f9;
-  border-radius: 1rem;
-  border: 0.15rem solid #222;
+  background: var(--butt-bg);
+  color: var(--text-light);
+  border-radius: 1.4rem;
+  border: 0.1rem solid var(--border);
   cursor: pointer;
   padding: 0.5rem 0.5rem;
-  width: 16rem;
-  margin-bottom: 2.6rem;
+  width: 6rem;
 }
 
-.scroll:hover {
-  background-color: #1da3d3;
+button:hover {
+  background: var(--butt-bg-hover);
 }
 
 .container {
@@ -189,7 +188,7 @@ img {
 @media only screen and (max-width: 1000px) {
   h1 {
     text-align: center;
-    margin-bottom: 0;
+    margin-top: -1.4rem;
   }
 
   .search {
@@ -208,7 +207,7 @@ img {
 @media only screen and (max-width: 600px) {
   h1 {
     text-align: center;
-    margin-bottom: 0;
+    margin-top: -1.4rem;
   }
 
   .search {
@@ -227,7 +226,7 @@ img {
 @media only screen and (max-width: 380px) {
   h1 {
     text-align: center;
-    margin-bottom: 0;
+    margin-top: -1.4rem;
   }
 
   .search {

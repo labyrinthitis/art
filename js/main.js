@@ -1,7 +1,7 @@
 const $form = document.querySelector('form');
 const $input = document.querySelector('.search');
 const $deck = document.querySelector('.deck');
-const $scroll = document.querySelector('.scroll');
+const $scroll = document.querySelector('button');
 const $root = document.documentElement;
 
 $scroll.addEventListener('click', function () {
