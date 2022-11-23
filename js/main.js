@@ -1,7 +1,7 @@
 const $form = document.querySelector('form');
 const $input = document.querySelector('.search');
 const $deck = document.querySelector('.deck');
-const $scroll = document.querySelector('button');
+const $scroll = document.querySelector('.top');
 const $root = document.documentElement;
 
 $scroll.addEventListener('click', function () {
@@ -52,15 +52,11 @@ function request(keyword) {
     document.querySelector('.quote').className = 'quote hidden';
 
     if (xhr.response.records.length === 0) {
-      const $notfoundheader = document.createElement('h2');
       const $notfoundparagraph = document.createElement('p');
 
-      $notfoundheader.className = 'txt-header';
       $notfoundparagraph.className = 'txt-paragraph';
-      $notfoundheader.textContent = '404 :/';
-      $notfoundparagraph.textContent = "There are no results for that criteria within the directory of the Harvard Art Mueseums. Try 'william blake', or 'my lady greensleeves'.";
+      $notfoundparagraph.textContent = "There are no results for that criteria within the directory of the Harvard Art Mueseums. Try 'William Blake' or 'Dante Gabriel Rossetti'.";
 
-      document.querySelector('.deck').append($notfoundheader);
       document.querySelector('.deck').append($notfoundparagraph);
 
       document.querySelector('.footer').className = 'footer hidden';

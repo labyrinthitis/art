@@ -27,15 +27,14 @@
   padding: 0;
   box-sizing: border-box;
 
-  --text-light: #f9f9f9;
+  --text-light: #f6f6ef;
   --text-dark: #999;
   --bg: #f6f6ef;
   --header-bg: #f88b42;
   --card-bg: #03a042;
-  --butt-bg: #0499cf;
-  --butt-bg-hover: #1da3d3;
-  --search-bg: #676464;
-  --search-bg-focus: #757575;
+  --top: #0499cf;
+  --search-bg: #757575;
+  --shadow: #222;
   --border: #222;
 }
 
@@ -46,20 +45,24 @@ body {
 
 h1 {
   font: bold 2.6rem OpenDyslexic;
+  text-transform: uppercase;
   color: var(--text-light);
-  text-shadow: #222 0.15rem 0.15rem;
+}
+
+h1:hover {
+  text-transform: lowercase;
 }
 
 img {
   font-family: OpenDyslexic;
   width: 100%;
-  border-bottom: 0.1rem solid var(--border);
+  box-shadow: 0 .05em .4em var(--shadow);
 }
 
 header {
   background: var(--header-bg);
-  border-bottom: 0.1rem solid var(--border);
-  padding: 2.6rem 0rem;
+  box-shadow: 0 .05em .4em var(--shadow);
+  padding: 1.8rem 0rem;
 }
 
 .search {
@@ -67,26 +70,21 @@ header {
   background: var(--search-bg);
   font: 1.6rem OpenDyslexic;
   padding: 0.68rem 0.68rem;
-  border: 0.1rem solid var(--border);
-  border-radius: 1.4rem;
+  border: 0.068rem solid var(--border);
+  border-radius: 0.9rem;
   color: var(--text-light);
   outline: none;
   caret-color: #f9f9f9;
 }
 
-.search:focus {
-  background: var(--search-bg-focus);
-}
-
 ::placeholder {
-  color: #d6d5d5;
-  font-size: 1.6rem;
+  color: var(--text-light);
 }
 
 .card {
   background: var(--card-bg);
   margin: 3.4rem 0rem;
-  border: 0.1rem solid var(--border);
+  box-shadow: 0 .05em .4em var(--shadow);
 }
 
 .description {
@@ -119,20 +117,10 @@ header {
   content: ".";
 }
 
-.txt-header {
-  font: 3.2rem OpenDyslexic;
-  color: var(--text-dark);
-  margin-top: 4rem;
-}
-
 .txt-paragraph {
   font: 1.8rem OpenDyslexic;
   color: var(--text-dark);
-  margin-bottom: 4rem;
-}
-
-.quote {
-  margin-top: 5rem;
+  margin: 6rem 0rem 4rem;
 }
 
 footer {
@@ -144,19 +132,16 @@ footer {
   justify-content: flex-end;
 }
 
-button {
-  font: 1.2rem OpenDyslexic;
-  background: var(--butt-bg);
-  color: var(--text-light);
-  border-radius: 1.4rem;
-  border: 0.1rem solid var(--border);
+.top {
+  font: 1.8rem OpenDyslexic;
+  font-variant: small-caps;
+  text-decoration: underline;
+  color: var(--top);
   cursor: pointer;
-  padding: 0.5rem 0.5rem;
-  width: 6rem;
 }
 
-button:hover {
-  background: var(--butt-bg-hover);
+.top:hover {
+  text-decoration: none;
 }
 
 .container {
@@ -188,7 +173,7 @@ button:hover {
 @media only screen and (max-width: 1000px) {
   h1 {
     text-align: center;
-    margin-top: -1.4rem;
+    margin-top: -0.8rem;
   }
 
   .search {
@@ -207,7 +192,7 @@ button:hover {
 @media only screen and (max-width: 600px) {
   h1 {
     text-align: center;
-    margin-top: -1.4rem;
+    margin-top: -0.8rem;
   }
 
   .search {
@@ -226,7 +211,7 @@ button:hover {
 @media only screen and (max-width: 380px) {
   h1 {
     text-align: center;
-    margin-top: -1.4rem;
+    margin-top: -0.8rem;
   }
 
   .search {
