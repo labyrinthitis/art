@@ -30,10 +30,10 @@
   --text-light: #f6f6ef;
   --text-dark: #999;
   --bg: #f6f6ef;
-  --header-bg: #f88b42;
+  --header-bg: #f89654;
   --card-bg: #03a042;
   --top: #0499cf;
-  --search-bg: #757575;
+  --search-bg: #f9a267;
   --shadow: #222;
   --border: #222;
 }
@@ -70,7 +70,7 @@ header {
   background: var(--search-bg);
   font: 1.6rem OpenDyslexic;
   padding: 0.68rem 0.68rem;
-  border: 0.068rem solid var(--border);
+  border: none;
   border-radius: 0.9rem;
   color: var(--text-light);
   outline: none;
