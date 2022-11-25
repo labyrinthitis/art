@@ -55,7 +55,7 @@ function request(keyword) {
       const $notfoundparagraph = document.createElement('p');
 
       $notfoundparagraph.className = 'txt-paragraph';
-      $notfoundparagraph.textContent = "There are no results for that criteria within the directory of the Harvard Art Mueseums. Try 'William Blake' or 'Dante Gabriel Rossetti'.";
+      $notfoundparagraph.textContent = "There are no results for that criteria within the directory of the Harvard Art Museums. Try 'William Blake', 'Dante Gabriel Rossetti', or 'Kahlil Gibran.";
 
       document.querySelector('.deck').append($notfoundparagraph);
 
