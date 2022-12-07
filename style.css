@@ -134,13 +134,13 @@ footer {
 .top {
   font: 1.8rem OpenDyslexic;
   font-variant: small-caps;
-  text-decoration: underline;
+  text-decoration: none;
   color: var(--top);
   cursor: pointer;
 }
 
 .top:hover {
-  text-decoration: none;
+  font-variant: normal;
 }
 
 .container {
