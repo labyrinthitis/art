@@ -10,7 +10,7 @@
 }
 
 @font-face {
-  font-family: OpenDyslexic;
+  font-family: OpenDyslexic, monospace;
   src: url(fonts/OpenDyslexic-Bold.otf);
   font-weight: bold;
 }
@@ -26,15 +26,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: OpenDyslexic;
 
   --text-light: #f6f6ef;
-  --text-dark: #999;
-  --bg: #f6f6ef;
+  --text-dark: rgb(197, 197, 197);
+  --bg: rgb(147, 70, 70);
   --header-bg: #f89654;
-  --card-bg: #03a042;
-  --top: #0499cf;
+  --card-bg: #f89654;
+  --button-bg: rgb(164, 79, 79);
+  --button-hover: rgb(176, 85, 85);
   --search-bg: #f9a267;
-  --shadow: #222;
+  --shadow: #333;
 }
 
 body {
@@ -43,7 +45,8 @@ body {
 }
 
 h1 {
-  font: bold 2.6rem OpenDyslexic;
+  font-size: 2.6rem;
+  font-weight: bold;
   text-transform: uppercase;
   color: var(--text-light);
 }
@@ -53,7 +56,6 @@ h1:hover {
 }
 
 img {
-  font-family: OpenDyslexic;
   width: 100%;
   box-shadow: 0 .05em .4em var(--shadow);
 }
@@ -67,7 +69,7 @@ header {
 .search {
   width: 100%;
   background: var(--search-bg);
-  font: 1.6rem OpenDyslexic;
+  font-size: 1.6rem;
   padding: 0.68rem 0.68rem;
   border: none;
   border-radius: 0.9rem;
@@ -87,7 +89,7 @@ header {
 }
 
 .description {
-  font: 1.8rem OpenDyslexic;
+  font-size: 1.6rem;
   color: var(--text-light);
   padding: 1rem 1rem;
 }
@@ -117,7 +119,7 @@ header {
 }
 
 .txt-paragraph {
-  font: 1.8rem OpenDyslexic;
+  font-size: 1.8rem;
   color: var(--text-dark);
   margin: 6rem 0rem 4rem;
 }
@@ -131,16 +133,18 @@ footer {
   justify-content: flex-end;
 }
 
-.top {
-  font: 1.8rem OpenDyslexic;
-  font-variant: small-caps;
-  text-decoration: none;
-  color: var(--top);
+button {
+  color: var(--text-light);
   cursor: pointer;
+  background: var(--button-bg);
+  font-size: 1.2rem;
+  padding: 0.68rem 0.68rem;
+  border-radius: 0.9rem;
+  border: none;
 }
 
-.top:hover {
-  font-variant: normal;
+button:hover {
+  background: var(--button-hover);
 }
 
 .container {
