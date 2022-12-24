@@ -28,14 +28,14 @@
   box-sizing: border-box;
   font-family: OpenDyslexic;
 
-  --text-light: #f6f6ef;
-  --text-dark: rgb(197, 197, 197);
-  --bg: rgb(147, 70, 70);
-  --header-bg: #f89654;
-  --card-bg: #f89654;
-  --button-bg: rgb(164, 79, 79);
-  --button-hover: rgb(176, 85, 85);
-  --search-bg: #f9a267;
+  --text-light: beige;
+  --text-dark: rgb(194, 168, 168);
+  --bg: beige;
+  --header-bg: mediumseagreen;
+  --card-bg: rgb(194, 168, 168);
+  --button-bg: mediumseagreen;
+  --button-hover: rgb(53, 158, 100);
+  --search-bg: rgb(53, 158, 100);
   --shadow: #333;
 }
 
@@ -74,7 +74,6 @@ header {
   border: none;
   border-radius: 0.9rem;
   color: var(--text-light);
-  outline: none;
   caret-color: #f9f9f9;
 }
 
@@ -121,7 +120,7 @@ header {
 .txt-paragraph {
   font-size: 1.8rem;
   color: var(--text-dark);
-  margin: 6rem 0rem 4rem;
+  margin: 8rem 0rem 4rem;
 }
 
 footer {
@@ -141,6 +140,7 @@ button {
   padding: 0.68rem 0.68rem;
   border-radius: 0.9rem;
   border: none;
+  box-shadow: 0 .05em .4em var(--shadow)
 }
 
 button:hover {
